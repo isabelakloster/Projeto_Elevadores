@@ -1,0 +1,14 @@
+
+- A placa e o simulador se comunicarão através de uma conexão serial
+- Os comandos enviados do simulador a placa serão colocados numa fila e deverão ser respondidos com um comando da placa ao simulador para executar a ação pretendida
+- O envio de informação via serial deverá ser protegido por mutex
+
+- Ao pressionamento de botão interno dos elevadores, a luz do mesmo deverá acender, e uma chamada será enviada a fila
+- Ao pressionar o botão externo dos elevadores, (acende a luz?) e uma chamada será enviada a fila
+
+- Uma tarefa será responsável pelo escalonamento da fila de chamados, indicando a sequência de atendimento das mesmas e sendo recalculada a cada novo recebimento de chamadas.
+- Quando um chamado for completado, a luz relacionada deverá apagar.
+
+Questões:
+- Uma tarefa para cada elevador?
+- Uma tarefa de escalonamento para os três elevadores, ou uma para cada?
